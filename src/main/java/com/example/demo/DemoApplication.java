@@ -11,7 +11,7 @@ public class DemoApplication {
 
 	@GetMapping("/")
 	public String home() {
-		return "Hello World! v1.3";
+		return "Hello World! v1.0.0";
 	}
 
 	public static void main(String[] args) {

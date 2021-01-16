@@ -4,15 +4,15 @@ node ('Slave'){
 
       stage('checkout') {
 
-            git credentialsId: '', url: 'https://github.com/ZiyaadQasem/top-spring-boot-docker.git'
+            git credentialsId: '', url: 'https://github.com/ZiyaadQasem/test-jenkins.git'
         }
 
       stage("test-build"){
-                sh "mvn clean install -f ./demo/pom.xml"
+                sh "mvn clean install"
         }
 
         stage("build image"){
-                sh 'docker build -t salla-demo -f ./demo/Dockerfile .'
+                sh 'docker build -t salla-demo  .'
          }
 
        stage("push image"){
